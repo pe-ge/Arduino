@@ -6,6 +6,7 @@
 RF24 radio(9,10);
 const uint64_t writingPipe = 0xF0F0F0F0E1LL;
 
+
 struct packet {
   byte throttle;
   byte yaw;
@@ -28,7 +29,8 @@ void setup() {
 
 void loop() {
   packet.throttle = map(analogRead(3), 0, 1023, 255, 0);
-  packet.yaw      = map(analogRead(0), 0, 1023, 255, 0);
+  //packet.yaw      = map(analogRead(0), 0, 1023, 255, 0);
+  packet.yaw = 129;
   packet.pitch    = map(analogRead(1), 0, 1023, 255, 0);
   packet.roll     = map(analogRead(2), 0, 1023, 255, 0);
 
