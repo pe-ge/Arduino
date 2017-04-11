@@ -19,10 +19,6 @@ void setup(void)
   radio.powerUp() ;
   radio.startListening();
 
-  //
-  // Dump the configuration of the rf unit for debugging
-  //
-
   radio.printDetails();
 }
 
